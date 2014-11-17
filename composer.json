@@ -1,0 +1,16 @@
+{
+    "name": "slim/cms",
+    "description": "Quick Slim CMS using Laravel ORM",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Trent Hogan",
+            "email": "trenthogan1@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "slim/slim": "2.*",
+        "illuminate/database": "*"
+    }
+}
