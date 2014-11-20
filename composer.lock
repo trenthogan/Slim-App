@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "6f37822fa103d612c4891734f428243aca55672e"
+                "reference": "c6a600e74ad092fac6ed03da51430ef8c45d0642"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/6f37822fa103d612c4891734f428243aca55672e",
-                "reference": "6f37822fa103d612c4891734f428243aca55672e",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/c6a600e74ad092fac6ed03da51430ef8c45d0642",
+                "reference": "c6a600e74ad092fac6ed03da51430ef8c45d0642",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 }
             ],
             "description": "The Illuminate Container package.",
-            "time": "2014-11-11 10:55:50"
+            "time": "2014-11-19 04:47:37"
         },
         {
             "name": "illuminate/contracts",
@@ -54,12 +54,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "c7f270924ad8939cf22004cd33fb7782fbddb4ed"
+                "reference": "3cf0143e63a38f9ae54bd0ec682ae02ba2608df5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/c7f270924ad8939cf22004cd33fb7782fbddb4ed",
-                "reference": "c7f270924ad8939cf22004cd33fb7782fbddb4ed",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/3cf0143e63a38f9ae54bd0ec682ae02ba2608df5",
+                "reference": "3cf0143e63a38f9ae54bd0ec682ae02ba2608df5",
                 "shasum": ""
             },
             "require": {
@@ -87,7 +87,7 @@
                 }
             ],
             "description": "The Illuminate Contracts package.",
-            "time": "2014-11-14 21:34:02"
+            "time": "2014-11-19 04:47:37"
         },
         {
             "name": "illuminate/database",
