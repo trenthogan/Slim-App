@@ -15,8 +15,8 @@ require_once 'includes/header.php';
             <div class="content-wrap">
                 <h6>Log in</h6>
                 <form id="login-form" action="<?php echo $baseUrl; ?>admin/login" method="post">
-                  <input class="form-control" type="text" placeholder="E-mail address">
-                  <input class="form-control" type="password" placeholder="Your password">
+                  <input name="username" class="form-control" type="text" placeholder="Username">
+                  <input name="password" class="form-control" type="password" placeholder="Password">
                   <br />
                   <input class="btn-glow primary" type="submit" value="Log in">
                 </form>

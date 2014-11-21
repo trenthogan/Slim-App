@@ -23,7 +23,13 @@ $app->get(
     }
 );
 
-// Login route
+
+
+/** 
+* Admin Login route
+*
+* Route for displaying the login form to the user
+*/
 $app->get(
     '/admin/login/',
     function () use ($app) {
@@ -34,12 +40,34 @@ $app->get(
     }
 );
 
-// Login route
+/** 
+* Admin Login route - POST
+*
+* Route for recieving a post request from the login form.
+* Will handle login request and redirect to dashboard if successful 
+* or display form validation on failure.
+*/
 $app->post(
     '/admin/login/',
     function () use ($app) {
 
-    	echo "Login Post";
+    	//Get post data
+    	$username = $app->request->post('username');
+    	$password = $app->request->post('password');
+
+    	
+
+    	//Require users model
+    	require '../models/users.php';
+    	//Get users from database..
+    	$user = Users::where('username', $username)->first();
+
+    	//Require users auth functions
+    	require '../libraries/auth.php';
+
+    	//Run login function which will process the login found in auth library.
+    	login( $password, $user->password );
+
     	
     }
 );

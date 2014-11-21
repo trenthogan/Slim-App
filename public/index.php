@@ -25,18 +25,16 @@ $app = new \Slim\Slim();
 
 
 /**
- *  Define Base Url for use in views..
- *
+ *  Define Base Url for use in code & views..
  */
-
-$app->hook('slim.before', function () use ($app) {
-    $app->view()->appendData(array('baseUrl' => 'http://localhost:8888/Slim-App/public/'));
+$baseUrl = 'http://localhost:8888/Slim-App/public/';
+$app->baseUrl = $baseUrl;
+$app->hook('slim.before', function () use ($app, $baseUrl) {
+    $app->view()->appendData(array('baseUrl' => $baseUrl));
 });
-
 
 /**
  *  Define Templates Directory
- *
  */
 $view = $app->view();
 $view->setTemplatesDirectory('../templates/');
@@ -44,10 +42,8 @@ $view->setTemplatesDirectory('../templates/');
 /**
  * Define the Slim application routes
  */
-
 require '../routes/public.php';
 require '../routes/admin.php'; 
-
 
 /**
  * Run the Slim application
