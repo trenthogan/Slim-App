@@ -3,7 +3,8 @@
 * Admin Routes
 *
 */
-
+//Require users auth functions
+require '../libraries/auth.php';
 
 /** 
 * Admin base route
@@ -12,6 +13,7 @@
 */
 $app->get(
     '/admin/',
+    $authenticate(),
     function () {
 
     	//Get users model
@@ -61,9 +63,6 @@ $app->post(
     	require '../models/users.php';
     	//Get users from database..
     	$user = Users::where('username', $username)->first();
-
-    	//Require users auth functions
-    	require '../libraries/auth.php';
 
     	//Run login function which will process the login found in auth library.
     	login( $password, $user->password );

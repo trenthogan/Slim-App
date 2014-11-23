@@ -23,6 +23,22 @@ require '../libraries/eloquent-slim.php';
  */
 $app = new \Slim\Slim();
 
+/**
+ *  Use SLim Cookies..
+ *
+ */
+
+$app->add(new \Slim\Middleware\SessionCookie(array(
+    'expires' => '20 minutes',
+    'path' => '/',
+    'domain' => null,
+    'secure' => false,
+    'httponly' => false,
+    'name' => 'slim_session',
+    'secret' => 'lkfjlkfjs9484848fh',
+    'cipher' => MCRYPT_RIJNDAEL_256,
+    'cipher_mode' => MCRYPT_MODE_CBC
+)));
 
 /**
  *  Define Base Url for use in code & views..

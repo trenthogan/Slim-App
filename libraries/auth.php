@@ -8,14 +8,16 @@
 *
 */
 
-$authenticate = function ( $role = 'administrator' ) {
-    return function () use ( $role ) {
-
-        $user = User::fetchFromDatabaseSomehow();
-
-        if ( $user->belongsToRole($role) === false ) {
+$authenticate = function ( ) {
+    return function () {
+    	
+    	//If not logged in.
+        if ( !$_SESSION['loggedIn'] ) {
             $app = \Slim\Slim::getInstance();
-            $app->redirect('/login');
+            $app->redirect($app->baseUrl . 'admin/login/');
+        }else{
+        	//Else return true
+        	return TRUE;
         }
 
     };
